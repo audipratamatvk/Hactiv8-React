@@ -19,6 +19,7 @@ obj["year"]= 1900
 
 console.log(obj)
 
+//Declarative Init
 let student = {
     name: "Fulan",
     major: "IT",
@@ -33,4 +34,6 @@ console.log("---------")
 console.log(Object.keys(student))
 console.log(Object.values(student))
 console.log(Object.entries(student))
+
+
 
