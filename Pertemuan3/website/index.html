@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <script>
+        //run with vite
+        console.log("hai")
+        //promise
+        // fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+        // .then(result => {
+        //     return result.json()
+        // })
+        // .then(data => {
+        //     return fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+        // })
+        // .then(result2 => {
+        //     return result2.json()
+        // })
+        // .then(data2 => {
+        //     console.log(data2)
+        // })
+        // .catch(err => {
+        //     console.log("Error")
+        //     console.log(err)
+        // })
+        async function fetchPokemon(){
+            try {
+                const response = await fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+                const data = await response.json()
+                console.log(data)
+                return data
+            } catch (err) {
+                console.log(err)
+                console.log("error disini")
+            }
+        }
+        // console.log(fetchPokemon())
+        fetchPokemon()
+            .then(data=>{
+                console.log(data)
+            })
+    </script>
+</body>
+</html>
