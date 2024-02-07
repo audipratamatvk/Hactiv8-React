@@ -1,3 +1,4 @@
-import Android  from "../oop"
+import Android  from "./oop.js"
 
-console.log(Android)
+const myAndroid = new Android();
+myAndroid.playMusic();

@@ -40,4 +40,4 @@ console.log(handphoneAudi.playMusic())
 console.log(handphoneAudi.call("0812345678"))
 console.log(handphoneAudi.playMusic())
 
-export default Android;
+export default Android
