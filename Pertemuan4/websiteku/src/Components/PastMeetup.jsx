@@ -1,4 +1,5 @@
 import React from "react"
+import Card from "./Card"
 
 class PastMeetup extends React.Component {
   render() {
@@ -12,18 +13,7 @@ class PastMeetup extends React.Component {
           {
             this.props.data.map((el, i) => {
               return (
-                <div className="card bg-light " key={i} style={{ width: 300 }}>
-                  <div className="card-body d-flex flex-column justify-content-between">
-                    <div>
-                      <h5 className="card-title">{el.date}</h5>
-                      <hr style={{ color: "blue" }} />
-                      <p className="card-text" style={{ textAlign: "justify" }}>{el.description}</p>
-                    </div>
-                    <div>
-                      <a href="#" className="btn btn-primary mt-4">{el.name}</a>
-                    </div>
-                  </div>
-                </div>
+                <Card key={i} name={el.name} date={el.date} description={el.description} i={el.no} />
               )
             })
           }

@@ -22,7 +22,7 @@ class NavBar extends React.Component {
               </li>
             </ul>
             <form className="input-group w-25">
-              <input type="text" className="form-control" placeholder="Input event name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+              <input type="text" className="form-control" value={this.props.input} onChange={this.props.changeText} placeholder="Input event name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
               <button type="submit" className="btn btn-secondary input-group-append">Search</button>
             </form>
           </div>
